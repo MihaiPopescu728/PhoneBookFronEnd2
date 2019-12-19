@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phonebook</title>
+
+    <link rel="stylesheet" type="text/css" href="css/Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+          integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous"/>
+</head>
+<body>
+<div id="content">
+    <h1> PhoneBook </h1>
+
+    <h3> Added new contact </h3>
+
+    <form id="create-contact-form">
+        <label for="firstName-field">First Name: </label>
+        <input type="text" id="firstName-field" placeholder="First Name">
+        <label for="lastName-field">Last Name: </label>
+        <input type="text" id="lastName-field">
+        <label for="phoneNumber-field">Phone Number: </label>
+        <input type="text" id="phoneNumber-field">
+        <input type="submit" id="submit-form"/>
+    </form>
+    <table id="contacts">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Selected for delete</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>Robert</td>
+            <td>Ilin</td>
+            <td>0423897</td>
+            <td><input type="checkbox" class="mark-done"/></td>
+            <td><a href="#" class="delete-item">
+                <i class="fas fa-recycle"></i></a></td>
+        </tr>
+
+        </tbody>
+    </table>
+
+</div>
+<button onclick="myFunction()">Delete selected contacts</button>
+<script src="JS/Libraries/jquery-3.4.1.min.js"></script>
+<script src="JS/phonebook.js"></script>
+</body>
+</html>
